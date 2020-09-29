@@ -38,12 +38,12 @@ void pathinrange(node* root,string path,int sum,int lb,int ub)
 		sum+=root->data;
 		if(sum<=ub and sum>=lb)
 		{
-			cout<<path + to_string(root->data)<<endl;   // ??????????
+			cout<<path + to_string(root->data)<<endl;   // issue ==> convert root->data to string from integer.
 		}
 		return;
 	}
-	pathinrange(root->left, path + to_string(root->data) + " " ,sum+root->data,lb,ub);
-	pathinrange(root->right, path + to_string(root->data) + " " ,sum+root->data,lb,ub);
+	pathinrange(root->left, path + to_string(root->data) + " " ,sum+root->data,lb,ub); // issue ==> convert root->data to string from integer.
+	pathinrange(root->right, path + to_string(root->data) + " " ,sum+root->data,lb,ub); // issue ==> convert root->data to string from integer.
 }
 int main()
 {
