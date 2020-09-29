@@ -33,9 +33,7 @@ int size(node*root)
 	{
 		return 0;
 	}
-	int ls=size(root->left);
-	int rs=size(root->right);
-	return ls+rs+1;
+	return (size(root->left)+size(root->right)+1))
 }
 int sum(node*root)
 {
