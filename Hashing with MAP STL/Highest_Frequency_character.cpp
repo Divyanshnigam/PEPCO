@@ -34,5 +34,5 @@ int main()
     return 0;
 }
 
-I/P: zmszeqxllzvheqwrofgcuntypejcxovtaqbnqyqlmrwitc
-O/P: q
+//I/P: zmszeqxllzvheqwrofgcuntypejcxovtaqbnqyqlmrwitc
+// O/P: q
