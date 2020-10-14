@@ -4,7 +4,7 @@ using namespace std;
 class graph
 {
 	int v;
-	list<int > *l;
+	list<int > *l;  // array of lists
 	public:
 		graph(int v)
 		{
