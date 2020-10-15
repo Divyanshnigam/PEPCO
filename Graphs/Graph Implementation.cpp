@@ -16,7 +16,7 @@ class graph
 			l[x].push_back(y);
 			l[y].push_back(x);
 		}
-		//printing
+
 		void printlist()
 		{
 			for(int i=0;i<v;i++)
