@@ -1,4 +1,5 @@
-Given a number N, the task is to check whether the number is Automorphic number or not.
+//Garbage File
+/*Given a number N, the task is to check whether the number is Automorphic number or not.
 A number is called Automorphic number if and only if its square ends in the same digits as the number itself.
 
 Input  : N = 25
@@ -9,7 +10,7 @@ Input : N = 7
 Output : Not Automorphic
 As 7*7 = 49
 
-SOLUTION:
+*/
 class Test { 
     // Function to check Automorphic number 
     static boolean isAutomorphic(int N) 
