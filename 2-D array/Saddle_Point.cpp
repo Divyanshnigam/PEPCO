@@ -25,6 +25,7 @@ int main()
 			}
 		}
 		bool flag=true;
+		// finding Maximum of a column
 		for(int k=0;k<n;k++)
 		{
 			if(a[k][svj]>a[i][svj])
