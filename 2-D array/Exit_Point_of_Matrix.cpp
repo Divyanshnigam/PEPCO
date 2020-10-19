@@ -1,67 +1,65 @@
 #include<iostream>
-#include<cstring>
 using namespace std;
-int main ()
+int main()
 {
-	int n,m;
-	cin>>n>>m;
-	int a[n][m];
-	for(int i=0;i<n;i++)
-	{
-		for(int j=0;j<m;j++)
-		{
-			cin>>a[i][j];
-		}
-	}
-	int dir=0;
-    int i=0;
-    int j=0;
+    int r,c;
+    cin>>r>>c;
+    int arr[r][c];
+    for(int i = 0 ; i< r ; i++)
+    {
+        for(int j = 0 ; j < c ; j++)
+        {
+            cin>>arr[i][j]; //input of an array 
+        }
+    }
+    int dir = 0 ; //it is moving in west 
+    int i = 0 ;
+    int j = 0;
+    /* dir = 0[e]
+    dir = 1[s] ; dir = 2[w] ; dir = 3[n] ; dir = 0[again back to east]*/
     while(true)
     {
-        dir=(dir+a[i][j])%4;
-        if(dir==0)
+        dir = (dir + arr[i][j] ) % 4;
+        if(dir == 0) //east 
         {
             j++;
         }
-        else if(dir==1)
+        else if(dir == 1) //south
         {
             i++;
         }
-        else if(dir==2)
+        else if(dir == 2) //west 
         {
             j--;
-            
         }
-        else if(dir==3)
+        else if(dir == 3) //north 
         {
             i--;
         }
         
-        if(i<0)
+        //Exit point condition
+        if( i < 0)
         {
-			i++;
-			break;
+            i++;
+            break;
         }
-        else if(j<0)
+        else if(j < 0)
         {
-        	j++;
-			break;
+            j++;
+            break;
         }
-        else if(i==n)
+        else if(i == r)
         {
-			i--;
-			break;
+            i--;
+            break;
         }
-        else if(i==m)
+        else if(j == c)
         {
-			j--;
-			break;
+            j--;
+            break;
         }
     }
-	cout<<i<<endl<<j;
-
-
-	return 0;
+    cout<<i<<endl<<j;
 }
 /*
 Sample Input
