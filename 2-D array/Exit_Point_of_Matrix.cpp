@@ -18,7 +18,7 @@ int main ()
     int j=0;
     while(true)
     {
-        dir=(dir+a[i][i])%4;
+        dir=(dir+a[i][j])%4;
         if(dir==0)
         {
             j++;
@@ -39,39 +39,51 @@ int main ()
         
         if(i<0)
         {
-
+			i++;
+			break;
         }
-        if(j<0)
+        else if(j<0)
         {
-
+        	j++;
+			break;
         }
-        if(i==n)
+        else if(i==n)
         {
-
+			i--;
+			break;
         }
-        if(i==m)
+        else if(i==m)
         {
-
+			j--;
+			break;
         }
     }
-
+	cout<<i<<endl<<j;
 
 
 	return 0;
 }
 /*
-i/p:
-2
+Sample Input
 4
-11
-12
-13
-14
-21
-22
-23
-24
-o/p:
-11 12 13 14 
-21 22 23 24
+4
+0
+0
+1
+0
+1
+0
+0
+0
+0
+0
+0
+0
+1
+0
+1
+0
+Sample Output
+1
+3
 */
