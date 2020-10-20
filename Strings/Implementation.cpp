@@ -9,7 +9,7 @@ int main()
 
     for(int i=0;i<s.length();i++)
     {
-        for(int j=i+1;j<s.length();j++)
+        for(int j=1;j<=s.length()-i;j++)
         {
             cout<<s.substr(i,j)<<endl;
         }
@@ -36,12 +36,17 @@ h
 he
 hel
 hell
+hello
+e
 el
 ell
 ello
+l
+ll
 llo
-llo
+l
 lo
+o
 
 helloworld1020
 Hi
