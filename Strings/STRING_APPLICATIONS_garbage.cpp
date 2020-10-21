@@ -16,7 +16,7 @@ int main()
     cout << s << endl; 
   
     return 0; 
-} 
+} /*
 Output:
 
 
@@ -27,11 +27,7 @@ GeeksforGeeks
 Some useful String Functions
 
 compare(string_to_compare ) :- It is used to compare two strings. It returns the difference of second string and first string in integer.
-filter_none
-edit
-play_arrow
-
-brightness_4
+*/
 // C++ program to demonstrate use of compare() 
 #include<iostream> 
 #include<string> 
@@ -47,19 +43,15 @@ int main()
     else 
         cout << "Strings are unequal"; 
     return 0; 
-} 
+} /*
 Output :
 
 Strings are equal
 find(“string”): Searches the string for the first occurrence of the substring specified in arguments. It returns the position of the first occurrence of substring.
 find_first_of(“string”): Searches the string for the first character that matches any of the characters specified in its arguments. It returns the position of the first character that matches.
 find_last_of(“string”): Searches the string for the last character that matches any of the characters specified in its arguments. It returns the position of the last character that matches.
-rfind(“string”): Searches the string for the last occurrence of the substring specified in arguments. It returns the position of the last occurrence of substring
-filter_none
-edit
-play_arrow
-
-brightness_4
+rfind(“string”): Searches the string for the last occurrence of the substring specified in arguments. It returns the position of the last occurrence of substringfilter_none
+*/
 // C++ program to demonstrate working of find(), 
 // rfind(),find_first_of() and find_last_of() 
 #include<iostream> 
@@ -93,7 +85,7 @@ int main()
   
     return 0; 
   
-} 
+} /*
 Output:
 
 First occurrence of "Geeks" starts from : 4
@@ -101,11 +93,7 @@ First occurrence of character from "reef" is at : 2
 Last occurrence of character from "reef" is at : 16
 Last occurrence of "Geeks" starts from : 14
 insert(pos_to_begin,string_to_insert): This function inserts the given substring in the string. It takes two arguments, first the position from which you want to insert the substring and second the substring.
-filter_none
-edit
-play_arrow
-
-brightness_4
+*/
 // C++ program to demonstrate working of insert() 
 #include<iostream> 
 #include<string> 
@@ -125,18 +113,14 @@ int main()
     cout << str << endl; 
   
     return 0; 
-} 
+} /*
 Output:
 
 Geeksfor
 GeeksforGeeks
 clear(): This function clears all the characters from the string. The string becomes empty (length becomes 0) after this operation.
 empty(): Tests whether the string is empty. This function return a Boolean value.
-filter_none
-edit
-play_arrow
-
-brightness_4
+*/
 // C++ program to demonstrate working of clear() 
 // and empty() 
 #include<iostream> 
@@ -156,7 +140,8 @@ int main()
   
     return 0; 
   
-} 
+} /*
 Output:
 
 String is empty
+*/
