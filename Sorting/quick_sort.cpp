@@ -1,62 +1,53 @@
-#include<bits/stdc++.h>
+#include<iostream>
 using namespace std;
-int partition(int *a,int start,int end)
+void swap(int *a , int i , int j)
 {
-    int pivot=a[end];
-    //P-index indicates the pivot value index
-    
-    int P_index=start;
-    int i,t; //t is temporary variable
-    
-    //Here we will check if array value is 
-    //less than pivot
-    //then we will place it at left side
-    //by swapping 
-    
-    for(i=start;i<end;i++)
+    cout<<"Swapping "<<a[j]<<" and "<<a[i]<<endl;
+    swap(a[i],a[j]);
+}
+int partition(int *a, int s, int e)
+{
+    int i = s - 1;
+    int j = s;
+    int pivot = a[e];
+    cout<<"pivot -> "<<pivot<<endl;
+    for(; j <= e- 1;)
     {
-    	if(a[i]<=pivot)
+        if(a[j] <= pivot)
         {
-            t=a[i];
-            a[i]=a[P_index];
-            a[P_index]=t;
-            P_index++;
+            i = i + 1;
+            swap(a,i,j);
         }
-     }
-     //Now exchanging value of
-     //pivot and P-index
-      t=a[end];
-      a[end]=a[P_index];
-      a[P_index]=t;
-    
-     //at last returning the pivot value index
-     return P_index;
- }
- void Quicksort(int *a,int start,int end)
- {
-    if(start<end)
-    {
-         int P_index=partition(a,start,end);
-             Quicksort(a,start,P_index-1);
-             Quicksort(a,P_index+1,end);
+        j = j + 1;
     }
+    swap(a,i+1,e);
+    cout<<"pivot index -> "<<i+1<<endl;
+    return i+1;
+}
+void q_s(int *arr, int s, int e)
+{
+    //base case 
+    if(s>e)
+    {
+        return;
+    }
+    int p = partition(arr,s,e);
+    q_s(arr,s,p-1);
+    q_s(arr,p+1,e);
+    
 }
 int main()
 {
     int n;
-        cout<<"Enter number of elements: ";
-        cin>>n;
-        int a[n];
-        cout<<"Enter the array elements:\n";
-        for(int i=0;i<n;i++)
-       {
-    	 cin>>a[i];
-       }
-      Quicksort(a,0,n-1);
-      cout<<"After Quick Sort the array is:\n";
-      for(int i=0;i<n;i++)
-      {
-    	 cout<<a[i]<<" ";
-      }
-    return 0;
+    cin>>n;
+    int arr[n];
+    for(int i = 0 ; i < n ; i++)
+    {
+        cin>>arr[i];
+    }
+    q_s(arr,0,n-1);
+    for(int i = 0 ; i < n ; i++)
+    {
+        cout<<arr[i]<<" ";
+    }
 }
