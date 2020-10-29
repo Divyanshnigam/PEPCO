@@ -17,7 +17,7 @@ void print(string str,string asf,int count,int pos)
 	}
 	if(count>0)
 	{
-		print(str,(asf+to_string(count)+str[pos]),0,pos+1);//yes 
+		print(str,(asf+to_string(count)+str[pos]),0,pos+1);  // yes 
 	}
 	else
 	{
