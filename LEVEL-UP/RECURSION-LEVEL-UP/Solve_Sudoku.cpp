@@ -72,7 +72,7 @@ void solve(int board[10][10],int i,int j)
 			{
 				board[i][j]=po;
 				solve(board,ni,nj);
-				board[i][j]=0;  //backtrack..
+				board[i][j]=0;  //backtracking...
 			}
 		}
 	}
