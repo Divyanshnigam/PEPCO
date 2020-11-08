@@ -23,7 +23,7 @@ void queensCombination(int qsf,int tq,bool chess[][10],int last_cellno)
         cout<<endl;
         return;
     }
-    for(int  cell =last_cellno + 1,cell<tq*tq;cell++)
+    for(int  cell =last_cellno + 1;cell<tq*tq;cell++)
     {
         int row=cell/tq;
         int col=cell%tq;
