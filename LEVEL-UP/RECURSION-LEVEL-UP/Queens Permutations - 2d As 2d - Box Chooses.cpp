@@ -44,7 +44,7 @@ int main()
 {
     int n;
     cin>>n;
-    bool queens[n];
+    bool queens[n] = {false}; //this will help you to have false at every location in the array, else it will have a garbage value. So, we need to declare false everywhere
     queensPermutations(0,n,0,0,"",queens);
 }
 
