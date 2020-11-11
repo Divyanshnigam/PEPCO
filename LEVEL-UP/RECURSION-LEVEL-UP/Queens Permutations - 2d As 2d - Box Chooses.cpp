@@ -26,7 +26,7 @@ void queensPermutations(int qsf,int tq,int row,int col,string asf,bool *queens)
     {
         nr=row;
         nc=col+1;
-        sep="\t";
+        sep="	";
     }
     for(int i=0;i<tq;i++)
     {
@@ -44,7 +44,6 @@ int main()
 {
     int n;
     cin>>n;
-    bool queens[n];
+    bool queens[n]={false};
     queensPermutations(0,n,0,0,"",queens);
 }
-

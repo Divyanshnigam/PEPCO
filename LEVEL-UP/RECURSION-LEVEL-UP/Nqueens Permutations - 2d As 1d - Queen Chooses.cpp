@@ -1,7 +1,7 @@
 #include<iostream>
 #include<cstring>
 using namespace std;
-bool IsQueenSafe(int chess[][10], int row, int col,int tq) 
+bool IsQueenSafe(int** chess, int row, int col,int tq) 
 {
     for(int i=row,j=col;i>=0;i--)
     {
@@ -62,7 +62,7 @@ bool IsQueenSafe(int chess[][10], int row, int col,int tq)
     return true;
 }
 
-void nqueens(int qpsf, int tq, int *chess[][10]) 
+void nqueens(int qpsf, int tq, int **chess) 
 {
     if(qpsf==tq)
     {
@@ -72,7 +72,7 @@ void nqueens(int qpsf, int tq, int *chess[][10])
             {
                 if(chess[i][j]==0)
                 {
-                    cout<<"\t";
+                    cout<<"-\t";
                 }
                 else
                 {
@@ -102,7 +102,15 @@ int main()
 {
     int n;
     cin>>n;
-    int chess[n][n]={0};
-    nqueens(0, n, chess);
+    int** chess_board = new int*[n+1];
+    for(int i = 0 ; i < n ; i++)
+    {
+        chess_board[i] = new int[n+1];
+        for(int j = 0 ; j < n ; j++)
+        {
+            chess_board[i][j]=0;
+        }
+    }
+    nqueens(0, n, chess_board);
 }
 
