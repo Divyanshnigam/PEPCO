@@ -1,0 +1,43 @@
+#include<iostream>
+#include<cstring>
+#include<set>
+#include<stdio.h>
+#include<string.h>
+#include<bits/stdc++.h>
+using namespace std;
+void solution(set <string> str, string ans, string sentence)
+{
+    if((sentence.size()) == 0)
+    {
+        cout<<ans<<endl;
+        return;
+    }
+    for(int i = 0 ; i < sentence.size() ; i++)
+    {
+        string s = sentence.substr(0,i+1);
+        if(str.count(s))
+        {
+            string right = sentence.substr(i+1);
+            solution(str, ans + s + " ",right);
+        }
+    }
+}
+int main()
+{
+    int n;
+    cin>>n;
+    set <string> str;
+    string s;
+    for(int i = 0 ; i < n ; i++)
+    {
+        cin>>s;
+        str.insert(s);
+    }
+    /*for(auto it = str.begin() ; it != str.end() ; ++it)
+    {
+        cout<<*it<<endl;
+    }*/
+    string s1;
+    cin>>s1;
+    solution(str,"",s1);
+}
