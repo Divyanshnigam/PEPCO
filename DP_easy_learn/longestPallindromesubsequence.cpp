@@ -1,12 +1,5 @@
-class Solution {
-public:
-    int longestPalindromeSubseq(string s) 
-    {
-        int n=s.size();
-        string rev_X = s;
-        reverse(rev_X.begin(), rev_X.end());
-        return LCS(s, rev_X, n, n);
-    }
+#include<bits/stdc++.h>
+using namespace std;
 
 int LCS(string X, string Y, int n, int m) 
 {
@@ -28,5 +21,16 @@ int LCS(string X, string Y, int n, int m)
 
         return dp[n][m];
     }
-        
-};
+    int longestPalindromeSubseq(string s) 
+    {
+        int n=s.size();
+        string rev_X = s;
+        reverse(rev_X.begin(), rev_X.end());
+        return LCS(s, rev_X, n, n);
+    }
+
+    int main() 
+    {
+        string s="aabecbdd";
+        cout<<longestPalindromeSubseq(s);
+    }
