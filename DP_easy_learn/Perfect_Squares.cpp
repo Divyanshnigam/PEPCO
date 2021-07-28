@@ -35,6 +35,7 @@ int solve(vector<int> x,int n ,int m)
     }
     return t[n][m];
 }
+
 int numSquares(int n) 
 {
     vector<int> perfectSquares;
