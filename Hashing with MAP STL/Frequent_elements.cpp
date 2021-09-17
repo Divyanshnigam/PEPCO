@@ -12,7 +12,6 @@ void printfre(vector<int> a, int n)
     {
         cout<<e.first<<" "<<e.second<<endl;
     }
-
 }
 int main()
 {
