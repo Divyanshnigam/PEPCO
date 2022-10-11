@@ -1,0 +1,58 @@
+#include <bits/stdc++.h>
+using namespace std;
+int fun(int n){
+    if(n>0){
+        return fun(n-1)+n;
+    }
+    return 0;
+}
+int main(){
+    int r;
+    r=fun(5);
+    cout << r;
+    return 0;
+}
+//Output = 15
+
+//Using Static Variable
+#include <bits/stdc++.h>
+using namespace std;
+int fun(int n){
+    static int x=0;
+    if(n>0){
+         x++;
+        return fun(n-1)+n;
+    }
+    return 0;
+}
+int main(){
+    int r;
+    r=fun(5);
+    cout << r;
+    return 0;
+}
+//Output = 25
+
+
+
+//Using Global Variable
+
+
+#include <bits/stdc++.h>
+using namespace std;
+int x=0;
+int fun(int n){
+    if(n>0){
+         x++;
+        return fun(n-1)+n;
+    }
+    return 0;
+}
+int main(){
+    int r;
+    r=fun(5);
+    cout << r;
+    return 0;
+}
+
+//Output = 25
